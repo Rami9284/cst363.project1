@@ -224,6 +224,7 @@ class HeapDBTest {
 		// try the lookup again, without the index
 		db.deleteIndex("c");
 		recs = db.lookup("c", 3);
+		assertTrue(recs.size() == m);
 		System.out.println("by indexed lookup: "+m+"; by sequential lookup: "+recs.size());
 		
 		db.close();
